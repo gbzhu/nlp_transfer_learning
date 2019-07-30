@@ -54,7 +54,7 @@ run GET_DATA.ipynb
 
 train.tsv  sample as：
 
-![Alt text](https://github.wdf.sap.corp/IPD-Integration/NLP_Machine_Learning/blob/master/BERT/image/train.png)
+![Alt text](./image/train.png)
 
 ## Fine tune Model
 **modify build_model.sh**
@@ -63,7 +63,7 @@ train.tsv  sample as：
 vim build_model.sh
 ```
 
-![Alt text](https://github.wdf.sap.corp/IPD-Integration/NLP_Machine_Learning/blob/master/BERT/image/build_model.png)
+![Alt text](./image/build_model.png)
 
 ```shell
 export BERT_BASE_DIR={your project path}/BERT_BASE_DIR
@@ -77,22 +77,22 @@ bash build_model.sh
 The log will show the model performance and generate output_models folde.
 Finding the checkpoint file with the largest tail number is the model after migration learning.
 
-![Alt text](https://github.wdf.sap.corp/IPD-Integration/NLP_Machine_Learning/blob/master/BERT/image/check.png)
+![Alt text](./image/check.png)
 
 ##  performance
 The performance is shown on our verification data set.
 
-![Alt text](https://github.wdf.sap.corp/IPD-Integration/NLP_Machine_Learning/blob/master/BERT/image/result.png)
+![Alt text](./image/result.png)
 
 This effect is better than the UIMFIT model. Here I also implemented the migration learning algorithm of UIMFIT on the same dataset.
 # Prediction
 modify test.tsv (drop label Column)
 
-![Alt text](https://github.wdf.sap.corp/IPD-Integration/NLP_Machine_Learning/blob/master/BERT/image/test_old.png)
+![Alt text](./image/test_old.png)
 
 run DEAL_WITH_TEST.ipynb
 
-![Alt text](https://github.wdf.sap.corp/IPD-Integration/NLP_Machine_Learning/blob/master/BERT/image/test_new.png)
+![Alt text](./image/test_new.png)
 
 Of course, we can make the test.tsv file according to the above test.tsv and replace the original file.
 run PREDICT.ipynb
